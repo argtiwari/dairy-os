@@ -1,21 +1,17 @@
+import Container from "@/components/common/Container";
 import HeroBackground from "./HeroBackground";
 import HeroContent from "./HeroContent";
 import HeroPhone from "./HeroPhone";
 
 export default function HeroSection() {
   return (
-    <section className="relative overflow-hidden rounded-[42px] bg-gradient-to-br from-[#FFFDF9] via-white to-[#EEF9EF]">
+    <section className="relative overflow-hidden bg-[#FBFCF8]">
+  <HeroBackground />
 
-      <HeroBackground />
-
-      <div className="relative mx-auto flex min-h-[900px] max-w-[1400px] px-20">
-
-        <HeroContent />
-
-        <HeroPhone />
-
-      </div>
-
-    </section>
+  <Container className="relative flex min-h-[calc(100vh-84px)] items-center justify-between">
+    <HeroContent />
+    <HeroPhone />
+  </Container>
+</section>
   );
 }

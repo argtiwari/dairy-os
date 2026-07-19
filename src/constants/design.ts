@@ -1,12 +1,22 @@
-export const HERO = {
-  maxWidth: "1440px",
-  phoneWidth: 390,
-  phoneHeight: 780,
-  borderRadius: 36,
-};
-
 export const COLORS = {
   primary: "#16A34A",
-  background: "#F8FAF7",
-  cream: "#FFFDF8",
+  primaryDark: "#15803D",
+  background: "#FBFCF8",
+  surface: "#FFFFFF",
+  text: "#111827",
+  muted: "#6B7280",
+  border: "#E5E7EB",
+};
+
+export const LAYOUT = {
+  maxWidth: "1440px",
+  navbarHeight: 88,
+  heroMinHeight: "100vh",
+};
+
+export const RADIUS = {
+  sm: "12px",
+  md: "20px",
+  lg: "32px",
+  xl: "40px",
 };

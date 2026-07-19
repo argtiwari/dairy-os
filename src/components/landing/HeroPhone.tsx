@@ -12,8 +12,8 @@ import {
 
 export default function HeroPhone() {
   return (
-    <div className="absolute right-0 top-1/2 -translate-y-1/2">
-
+    <div className="absolute right-[4%] top-1/2 -translate-y-1/2">
+      
       <FloatingCard
         title="Today's Milk"
         value="315 L"
