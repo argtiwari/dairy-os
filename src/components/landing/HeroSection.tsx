@@ -1,74 +1,88 @@
+"use client";
+
+import { motion } from "framer-motion";
 import AppButton from "@/components/ui/AppButton";
-import StatCard from "@/components/common/StatCard";
-
-import {
-    ArrowRight,
-    Sparkles,
-    PawPrint,
-    Milk,
-    DollarSign,
-} from "lucide-react";
-
+import { ArrowRight, Play, Sparkles } from "lucide-react";
 
 export default function HeroSection() {
-    return (
-        <section className="pt-8">
-            <div className="rounded-[32px] border border-green-100 bg-gradient-to-br from-green-50 via-white to-emerald-50 p-6 shadow-sm">
+  return (
+    <section className="grid min-h-[85vh] grid-cols-2 items-center gap-16">
 
-                {/* Badge */}
-                <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-green-100 px-4 py-2 text-sm font-semibold text-green-700">
-                    <Sparkles size={16} />
-                    Built for Indian Dairy Farmers
-                </div>
+      {/* LEFT */}
 
-                {/* Heading */}
-                <h1 className="text-4xl font-extrabold leading-tight text-gray-900">
-                    Manage your entire dairy farm from one simple app.
-                </h1>
+      <div>
 
-                {/* Description */}
-                <p className="mt-5 text-lg leading-8 text-gray-600">
-                    Track animals, milk, health, expenses, workers and reminders without
-                    notebooks or confusion.
-                </p>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: .5 }}
+          className="mb-8 inline-flex items-center gap-2 rounded-full border border-green-200 bg-green-50 px-5 py-2 text-sm font-semibold text-green-700"
+        >
+          <Sparkles size={16} />
+          Built for Indian Dairy Farmers 🇮🇳
+        </motion.div>
 
-                {/* Buttons */}
-                <div className="mt-8 flex flex-col gap-4">
-                    <AppButton className="w-full">
-                        Login with Google
-                        <ArrowRight className="ml-2" size={18} />
-                    </AppButton>
+        <motion.h1
+          initial={{ opacity: 0, y: 25 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: .15 }}
+          className="max-w-xl text-6xl font-extrabold leading-[1.1]"
+        >
+          Manage Your Dairy Farm
+          <br />
 
-                    <AppButton
-                        variant="outline"
-                        className="w-full border-green-600 text-green-700"
-                    >
-                        Open Demo
-                    </AppButton>
-                </div>
+          <span className="text-green-600">
+            in a Smarter Way
+          </span>
 
-                {/* Stats */}
-                <div className="mt-10 grid grid-cols-3 gap-3">
-                    <StatCard
-                        icon={<PawPrint size={22} />}
-                        value="42+"
-                        label="Animals"
-                    />
+        </motion.h1>
 
-                    <StatCard
-                        icon={<Milk size={22} />}
-                        value="315L"
-                        label="Today's Milk"
-                    />
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: .3 }}
+          className="mt-8 max-w-lg text-xl leading-9 text-gray-500"
+        >
+          Track cows, milk production, health, expenses,
+          workers and reminders from one beautiful app.
+        </motion.p>
 
-                    <StatCard
-                        icon={<DollarSign size={22} />}
-                        value="₹21K"
-                        label="Profit"
-                    />
-                </div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: .45 }}
+          className="mt-10 flex gap-5"
+        >
 
-            </div>
-        </section>
-    );
+          <AppButton className="px-8">
+            Get Started
+            <ArrowRight className="ml-2" size={18} />
+          </AppButton>
+
+          <AppButton
+            variant="outline"
+            className="px-8"
+          >
+            <Play size={18} className="mr-2" />
+            Watch Demo
+          </AppButton>
+
+        </motion.div>
+
+      </div>
+
+      {/* RIGHT */}
+
+      <div className="flex items-center justify-center">
+
+        <div className="flex h-[700px] w-[360px] items-center justify-center rounded-[55px] border-8 border-gray-900 bg-gradient-to-b from-green-100 to-white text-xl font-bold shadow-2xl">
+
+          PHONE MOCKUP
+
+        </div>
+
+      </div>
+
+    </section>
+  );
 }
