@@ -13,12 +13,12 @@ import {
 export default function HeroPhone() {
   return (
     <div className="absolute right-[4%] top-1/2 -translate-y-1/2">
-      
+
       <FloatingCard
         title="Today's Milk"
         value="315 L"
         icon={<Milk size={22} />}
-        className="-right-24 top-20"
+       className="-right-14 top-16"
         delay={0.2}
       />
 
@@ -26,7 +26,7 @@ export default function HeroPhone() {
         title="Estimated Profit"
         value="₹21,500"
         icon={<TrendingUp size={22} />}
-        className="-right-20 bottom-36"
+        className="-right-10 bottom-28"
         delay={0.5}
       />
 
@@ -34,7 +34,7 @@ export default function HeroPhone() {
         title="Pregnant"
         value="7"
         icon={<HeartPulse size={22} />}
-        className="-left-28 top-72"
+       className="-left-10 bottom-20"
         delay={0.7}
       />
 

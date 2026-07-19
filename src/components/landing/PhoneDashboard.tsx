@@ -38,15 +38,15 @@ export default function PhoneDashboard() {
 
       {/* Greeting */}
 
-      <div>
-        <p className="text-xs font-medium text-gray-500">
-          Good Morning 👋
-        </p>
+      <div className="mb-2">
+  <p className="text-xs text-gray-500">
+    Good Morning 👋
+  </p>
 
-        <h2 className="mt-1 text-2xl font-bold text-gray-900">
-          DairyOS
-        </h2>
-      </div>
+  <h2 className="mt-1 text-[28px] font-bold tracking-tight text-gray-900">
+    Anurag Farm
+  </h2>
+</div>
 
       {/* Stats */}
 
