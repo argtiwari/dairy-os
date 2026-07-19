@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import AppButton from "@/components/ui/AppButton";
+import PhoneMockup from "./PhoneMockup";
 import { ArrowRight, Play, Sparkles } from "lucide-react";
 
 export default function HeroSection() {
@@ -77,7 +78,7 @@ export default function HeroSection() {
 
         <div className="flex h-[700px] w-[360px] items-center justify-center rounded-[55px] border-8 border-gray-900 bg-gradient-to-b from-green-100 to-white text-xl font-bold shadow-2xl">
 
-          PHONE MOCKUP
+         <PhoneMockup />
 
         </div>
 
