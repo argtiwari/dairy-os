@@ -1,53 +1,74 @@
 "use client";
 
+import { motion } from "framer-motion";
+import { Milk, TrendingUp } from "lucide-react";
+
 import PhoneMockup from "./PhoneMockup";
 import FloatingCard from "./FloatingCard";
 
-import {
-  Milk,
-  TrendingUp,
-  Syringe,
-  HeartPulse,
-} from "lucide-react";
-
 export default function HeroPhone() {
   return (
-    <div className="absolute right-[4%] top-1/2 -translate-y-1/2">
+    <motion.div
+      initial={{ opacity: 0, x: 40 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{
+        duration: 0.8,
+        delay: 0.25,
+      }}
+      className="relative flex w-full items-center justify-center py-10 lg:justify-end lg:py-0"
+    >
+      {/* Top Right Card */}
 
       <FloatingCard
         title="Today's Milk"
         value="315 L"
         icon={<Milk size={22} />}
-       className="-right-14 top-16"
-        delay={0.2}
+        className="
+          top-10
+          -right-2
+
+          lg:top-16
+          lg:-right-8
+
+          xl:top-20
+          xl:-right-12
+        "
+        delay={0.3}
       />
 
+      {/* Bottom Left Card */}
+
       <FloatingCard
-        title="Estimated Profit"
+        title="Today's Revenue"
         value="₹21,500"
         icon={<TrendingUp size={22} />}
-        className="-right-10 bottom-28"
-        delay={0.5}
+        className="
+          bottom-12
+          -left-2
+
+          lg:bottom-20
+          lg:-left-8
+
+          xl:bottom-24
+          xl:-left-12
+        "
+        delay={0.6}
       />
 
-      <FloatingCard
-        title="Pregnant"
-        value="7"
-        icon={<HeartPulse size={22} />}
-       className="-left-10 bottom-20"
-        delay={0.7}
-      />
+      {/* Phone */}
 
-      <FloatingCard
-        title="Vaccination"
-        value="3 Due"
-        icon={<Syringe size={22} />}
-        className="-left-20 bottom-24"
-        delay={0.9}
-      />
-
-      <PhoneMockup />
-
-    </div>
+      <motion.div
+        animate={{
+          y: [0, -10, 0],
+        }}
+        transition={{
+          duration: 6,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+      >
+        <PhoneMockup />
+      </motion.div>
+    </motion.div>
   );
 }

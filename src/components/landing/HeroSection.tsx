@@ -6,12 +6,24 @@ import HeroPhone from "./HeroPhone";
 export default function HeroSection() {
   return (
     <section className="relative overflow-hidden bg-[#FBFCF8]">
-  <HeroBackground />
+      <HeroBackground />
 
-  <Container className="relative flex min-h-[calc(100vh-84px)] items-center justify-between">
-    <HeroContent />
-    <HeroPhone />
-  </Container>
-</section>
+      <Container
+        className="
+          relative
+          grid
+          min-h-[calc(100vh-84px)]
+          items-center
+          gap-14
+          py-10
+          lg:grid-cols-2
+          xl:gap-20
+        "
+      >
+        <HeroContent />
+
+        <HeroPhone />
+      </Container>
+    </section>
   );
 }

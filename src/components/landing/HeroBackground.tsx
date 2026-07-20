@@ -15,7 +15,7 @@ export default function HeroBackground() {
 
       {/* Phone Glow */}
 
-      <div className="absolute right-[10%] top-1/2 h-[520px] w-[520px] -translate-y-1/2 rounded-full bg-green-400/15 blur-[120px]" />
+      <div className="absolute right-[10%] top-1/2 h-[420px] w-[420px] -translate-y-1/2 rounded-full bg-green-400/15 blur-[120px]" />
 
       {/* Decorative Blurred Circles */}
 
@@ -25,7 +25,7 @@ export default function HeroBackground() {
 
       {/* Farm Image */}
 
-      <div className="absolute bottom-0 right-0 h-[420px] w-[760px] overflow-hidden rounded-tl-[120px] opacity-80">
+      <div className="absolute bottom-0 right-0 h-[330px] w-[600px] overflow-hidden rounded-tl-[120px] opacity-80">
 
         <Image
           src="/images/farm-bg.jpg"

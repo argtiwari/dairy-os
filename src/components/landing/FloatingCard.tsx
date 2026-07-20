@@ -46,12 +46,12 @@ export default function FloatingCard({
       }}
       className={`
         absolute
-        w-56
+        w-48
         rounded-[28px]
         border
         border-white/60
         bg-white/80
-        p-5
+        p-4
         backdrop-blur-xl
         shadow-[0_20px_60px_rgba(0,0,0,.12)]
         ${className}
@@ -71,7 +71,7 @@ export default function FloatingCard({
 
       {/* Value */}
 
-      <h3 className="mt-5 text-3xl font-bold tracking-tight text-gray-900">
+      <h3 className="mt-5 text-2xl font-bold tracking-tight text-gray-900">
         {value}
       </h3>
 
@@ -89,9 +89,6 @@ export default function FloatingCard({
             +12% Today
           </p>
 
-          <p className="text-[11px] text-gray-400">
-            Updated 2 min ago
-          </p>
         </div>
 
         <div className="flex h-9 w-9 items-center justify-center rounded-full bg-green-50 text-green-600">
@@ -100,4 +97,4 @@ export default function FloatingCard({
       </div>
     </motion.div>
   );
-}
+};
